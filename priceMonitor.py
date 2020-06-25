@@ -28,9 +28,7 @@ def check_price():
     # Beautified format
     soup = BeautifulSoup(html, 'html.parser')
 
-    heading = soup.find("span", {"class": "_35KyD6"}).get_text()
-    print('Heading:\n', heading.strip())
-
+    #   retrieving price
     price = soup.find("div", {"class": "_1vC4OE _3qQ9m1"}).get_text()
     conv_price = price[1:7].replace(',', '')
     conv_price = int(conv_price)
